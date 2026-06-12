@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Queue Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Hospital Admin Panel</h1>
+
+  <select id="hospital">
+    <option value="KMC Hospital">KMC Hospital</option>
+    <option value="A.J Hospital">A.J Hospital</option>
+    <option value="Yenepoya Hospital">Yenepoya Hospital</option>
+    <option value="Father Muller Hospital">Father Muller Hospital</option>
+    <option value="City Clinic">City Clinic</option>
+    <option value="Unity Hospital">Unity Hospital</option>
+  </select>
+
+  <select id="department">
+    <option value="General Medicine">General Medicine</option>
+    <option value="ENT">ENT</option>
+    <option value="Orthopedic">Orthopedic</option>
+    <option value="Cardiology">Cardiology</option>
+  </select>
+
+  <button onclick="loadQueue()">Load Queue</button>
+  <button onclick="nextPatient()">Next Patient</button>
+
+  <h2>Queue List</h2>
+  <div id="queueList"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

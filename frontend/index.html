@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Healthcare Queue System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="authPage" class="auth-container">
+
+    <div id="signupBox" class="auth-box">
+      <h2>Create Your Account</h2>
+
+      <input id="signupName" placeholder="👤 User Name">
+      <input id="signupEmail" placeholder="✉️ E-mail">
+      <input id="signupMobile" placeholder="📱 Mobile Number">
+      <input id="signupPassword" type="password" placeholder="🔒 Password">
+      <input id="confirmPassword" type="password" placeholder="🔒 Confirm Password">
+
+      <button class="red-btn" onclick="signupPatient()">Signup</button>
+
+      <h3>Or</h3>
+
+      <button class="google-btn">🌐 signup with Google</button>
+
+      <p>
+        Already have an account?
+        <span onclick="showLogin()">Login</span>
+      </p>
+
+      <button class="emergency-btn" onclick="openEmergency()">EMERGENCY</button>
+    </div>
+
+    <div id="loginBox" class="auth-box" style="display:none;">
+      <h2>Login Your Account</h2>
+
+      <input id="loginEmail" placeholder="✉️ E-mail / Mobile">
+      <input id="loginPassword" type="password" placeholder="🔒 Password">
+
+      <button class="red-btn" onclick="loginPatient()">Login</button>
+
+      <p>
+        Don’t have an account?
+        <span onclick="showSignup()">Signup</span>
+      </p>
+
+      <button class="emergency-btn" onclick="openEmergency()">EMERGENCY</button>
+    </div>
+
+  </div>
+
+  <div id="dashboard" style="display:none;">
+    <h1>Healthcare Queue System</h1>
+
+    <input id="searchHospital" placeholder="Search hospital..." onkeyup="searchHospitals()">
+
+    <h3 id="hospitalHeading">Hospitals</h3>
+    <div id="hospitalList"></div>
+
+    <div id="registerBox" style="display:none;">
+      <h2 id="selectedHospitalName"></h2>
+
+      <button onclick="backToHospitals()">Back to Hospitals</button>
+
+      <h3>Hospital Queue Dashboard</h3>
+      <div id="hospitalDashboard"></div>
+
+      <h3>Register Patient</h3>
+
+      <input id="patientName" placeholder="Patient name">
+      <input id="age" placeholder="Age">
+      <input id="mobile" placeholder="Mobile number">
+
+      <select id="department">
+        <option value="General Medicine">General Medicine</option>
+        <option value="ENT">ENT</option>
+        <option value="Orthopedic">Orthopedic</option>
+        <option value="Cardiology">Cardiology</option>
+      </select>
+
+      <button onclick="registerPatient()">Register Patient</button>
+    </div>
+
+    <div id="queueResult"></div>
+  </div>
+
+  <div id="emergencyPage" style="display:none;" class="emergency-page">
+    <h1>Emergency Help</h1>
+    <p>If it is serious, call emergency services immediately.</p>
+
+    <button onclick="window.location.href='tel:108'">Call Ambulance 108</button>
+    <button onclick="window.location.href='tel:112'">Call Emergency 112</button>
+
+    <h3>Emergency Types</h3>
+    <ul>
+      <li>Chest pain</li>
+      <li>Accident</li>
+      <li>Breathing problem</li>
+      <li>Severe bleeding</li>
+      <li>Unconscious patient</li>
+    </ul>
+
+    <button onclick="backToAuth()">Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -16,11 +16,18 @@ The system allows patients to register online, generate tokens, track queue stat
 ## Tech Stack
 * Frontend: HTML, CSS, JavaScript
 * Backend: Node.js, Express.js
-* Database: MongoDB
+* Database: MongoDB Atlas
+* Version Control: Git & GitHub
 
 
 ## Project Status
--Ongoing Development*
+*Ongoing Development*
+
+## Future Enhancements
+* AI-based hospital recommendation
+* Voice-based patient assistance
+* Real-time queue updates
+* Multi-hospital support
 
 
 ## Author
